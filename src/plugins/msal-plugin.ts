@@ -126,7 +126,8 @@ export class MsalPlugin implements PluginObject<MsalPluginOptions> {
 		// 	this.acquireToken().then(t => console.log(t));
 		if (response !== null) {
 			console.log(response.account.username);
-			alert(response.accessToken);
+			// alert(response.accessToken);
+			sessionStorage.setItem('access_token', response.accessToken);
 			msalPluginInstance.isAuthenticated = true;
 		} else {
 			const currentAccounts = msalInstance.getAllAccounts();
