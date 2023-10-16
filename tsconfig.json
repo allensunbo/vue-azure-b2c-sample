@@ -1,31 +1,33 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
     "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "types": [
-      "webpack-env"
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+        "module": "commonjs",
+        "target": "es5",
+        "lib": [
+            "es2015",
+            "dom",
+            "es2015.promise"
+        ],
+        "allowUnusedLabels": false,
+        "noImplicitReturns": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "noImplicitAny": true,
+        "types": [
+            "node",
+            "jest"
+        ],
+        "jsx": "preserve",
+        "isolatedModules": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "incremental": true
   },
   "include": [
     "src/**/*.ts",

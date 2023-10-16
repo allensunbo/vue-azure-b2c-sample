@@ -8,10 +8,10 @@ Vue.config.productionTip = false;
 
 
 const options: MsalPluginOptions = {
-  clientId: process.env.VUE_APP_MSAL_CLIENT_ID,
-  loginAuthority:  process.env.VUE_APP_MSAL_LOGIN_AUTHORITY,
-  passwordAuthority: process.env.VUE_APP_MSAL_PASSWORD_RESET_AUTHORITY,
-  knownAuthority: process.env.VUE_APP_MSAL_KNOWN_AUTHORITY
+  clientId: process.env.VUE_APP_MSAL_CLIENT_ID as string,
+  loginAuthority:  process.env.VUE_APP_MSAL_LOGIN_AUTHORITY as string,
+  passwordAuthority: process.env.VUE_APP_MSAL_PASSWORD_RESET_AUTHORITY as string,
+  knownAuthority: process.env.VUE_APP_MSAL_KNOWN_AUTHORITY as string,
 };
 
 Vue.use(new MsalPlugin(), options);

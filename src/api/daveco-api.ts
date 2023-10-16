@@ -1,8 +1,9 @@
-import { msalPluginInstance } from "@/plugins/msal-plugin";
+import { msalPluginInstance } from '../plugins/msal-plugin';
 
 class DaveCoApi {
     async getSuperSecretThings(): Promise<any[]> {
         const accessToken = await msalPluginInstance.acquireToken();
+				console.log(accessToken);
         const response = await fetch('/api/secret/', {
             headers: {
                 authorization: `Bearer ${accessToken}`
