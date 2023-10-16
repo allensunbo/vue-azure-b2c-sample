@@ -42,7 +42,7 @@ export default class App extends Vue {
     console.log(hash.get("code"));
 		this.$msal.acquireToken()
 		.then( v => {
-			console.log('!!', v);
+			console.log('!!!!!', v);
 			});
 		// this.$msal.acquireToken();
 
